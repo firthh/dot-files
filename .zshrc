@@ -115,4 +115,7 @@ alias dcc='docker rm -f $(docker ps -a -q)'
 #export PROMPT='%{$fg[magenta]%}%n%{$reset_color%} at %{$fg[yellow]%}%m%{$reset_color%} $NIX_SHELL>'
 alias ns='nix-shell --run "NIX_PROMPT=nix-shell zsh"'
 
+alias emacst='emacsclient -t -s /tmp/emacs1000/server'
+alias emacsc='emacsclient -c -s /tmp/emacs1000/server'
+
 source ~/.uswitch-secrets

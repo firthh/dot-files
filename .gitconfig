@@ -6,4 +6,4 @@
 [push]
 	default = matching
 [core]
-	editor = emacsclient -t
+	editor = emacsclient -t -s /tmp/emacs1000/server

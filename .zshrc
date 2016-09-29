@@ -118,4 +118,15 @@ alias ns='nix-shell --run "NIX_PROMPT=nix-shell zsh"'
 alias emacst='emacsclient -t -s /tmp/emacs1000/server'
 alias emacsc='emacsclient -c -s /tmp/emacs1000/server'
 
+alias start-vpn='sudo systemctl start openvpn-uswitch'
+alias stop-vpn='sudo systemctl stop openvpn-uswitch'
+alias start-mouse='sudo hciconfig hci0 up'
+
+export PATH="$PATH:$HOME/bin"
+
 source ~/.uswitch-secrets
+
+function rmline {
+    cat $1 | grep  -v $2 > $1.bak
+    mv $1.bak $1
+}

@@ -29,7 +29,7 @@
      ;; elixir
      go
      lua
-     rust
+     ;; rust
      docker
      shell
      nixos
@@ -57,6 +57,7 @@
                                       docker
                                       dockerfile-mode
                                       yaml-mode
+                                      jsx-mode
 ;                                      exec-path-from-shell
                                       )
    ;; A list of packages and/or extensions that will not be install and loaded.
@@ -91,8 +92,9 @@ before layers configuration."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(zenburn
+   dotspacemacs-themes '(apropospriate-dark
                          solarized-dark
+                         zenburn
                          solarized-light
                          spacemacs-light
                          spacemacs-dark
@@ -164,7 +166,7 @@ before layers configuration."
    ;; point when it reaches the top or bottom of the screen.
    dotspacemacs-smooth-scrolling t
    ;; If non-nil smartparens-strict-mode will be enabled in programming modes.
-   dotspacemacs-smartparens-strict-mode nil
+   dotspacemacs-smartparens-strict-mode t
    ;; Select a scope to highlight delimiters. Possible value is `all',
    ;; `current' or `nil'. Default is `all'
    dotspacemacs-highlight-delimiters 'all
@@ -193,6 +195,7 @@ layers configuration."
   (add-hook 'alchemist-mode-hook 'company-mode)
   (exec-path-from-shell-initialize)
   (setq-default js2-basic-offset 2)
+  (setq-default js-indent-level 2)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will

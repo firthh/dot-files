@@ -33,7 +33,7 @@
      docker
      shell
      nixos
-     ocaml
+     haskell
      (ruby :variables
            ruby-version-manager 'rbenv)
      ;; org

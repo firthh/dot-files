@@ -122,6 +122,8 @@ alias start-vpn='sudo systemctl start openvpn-uswitch'
 alias stop-vpn='sudo systemctl stop openvpn-uswitch'
 alias start-mouse='sudo hciconfig hci0 up'
 
+alias gpg=gpg2
+
 export PATH="$PATH:$HOME/bin"
 
 source ~/.uswitch-secrets
@@ -129,4 +131,7 @@ source ~/.uswitch-secrets
 function rmline {
     cat $1 | grep  -v $2 > $1.bak
     mv $1.bak $1
+}
+function knownhosts {
+   sed -i.bak -e "$1d" /home/hugo.firth/.ssh/known_hosts
 }

@@ -84,27 +84,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-#export JAVA_HOME="/usr/lib/jvm/java-1.8.0"
-#. /home/hugo/.nix-profile/etc/profile.d/nix.sh
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-#export PATH="$PATH:/usr/share/elixir/1.0.3/bin/" # Added path for Elixir
-
-# export path for rust binaries
-# export PATH="$PATH:/home/hugo.firth/.cargo/bin/"
-# export RUST_SRC_PATH=/home/hugo.firth/code/rust/src
-
-# export PATH="$HOME/.rbenv/bin:$PATH"
-
 export PATH="$PATH:$HOME/bin/terraform"
-
-#export GOROOT="$HOME/go"
-#export PATH="$GOROOT/bin:$PATH"
-export GOPATH="$HOME/gopath"
-export PATH="$GOPATH/bin:$GOPATH/src/github.com/uswitch/vaulted/bin:$PATH"
-
-#eval "$(rbenv init -)"
 
 alias b='bundle exec'
 alias be='bundle exec'
@@ -114,6 +94,9 @@ alias dcc='docker rm -f $(docker ps -a -q)'
 
 #export PROMPT='%{$fg[magenta]%}%n%{$reset_color%} at %{$fg[yellow]%}%m%{$reset_color%} $NIX_SHELL>'
 alias ns='nix-shell --run "NIX_PROMPT=nix-shell zsh"'
+
+alias golangenv='ns ~/profiles/golang/default.nix'
+alias leinenv='ns ~/profiles/lein/default.nix'
 
 alias emacst='emacsclient -t -s /tmp/emacs1000/server'
 alias emacsc='emacsclient -c -s /tmp/emacs1000/server'

@@ -98,6 +98,10 @@ alias ns='nix-shell --run "NIX_PROMPT=nix-shell zsh"'
 alias golangenv='ns ~/profiles/golang/default.nix'
 alias leinenv='ns ~/profiles/lein/default.nix'
 
+# function lein {
+#     nix-shell profiles/lein/default.nix --run "lein $@"
+# }
+
 alias emacst='emacsclient -t -s /tmp/emacs1000/server'
 alias emacsc='emacsclient -c -s /tmp/emacs1000/server'
 

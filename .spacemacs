@@ -12,6 +12,10 @@
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
+     elixir
+     nginx
+     html
+     sql
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
@@ -181,13 +185,16 @@ before layers configuration."
    dotspacemacs-default-package-repository nil
    )
   ;; User initialization goes here
+  (setq clojure-enable-fancify-symbols t)
+  (setq-default js2-basic-offset 2)
+  (setq-default js-indent-level 2)
+  (add-hook 'clojure-mode-hook 'paredit-mode)
   )
 
 (defun dotspacemacs/config ()
   "Configuration function.
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
-  (add-hook 'clojure-mode-hook 'paredit-mode)
   (setq nrepl-hide-special-buffers t)
   (setq cider-show-error-buffer 'except-in-repl)
   (setq cider-auto-select-error-buffer nil)

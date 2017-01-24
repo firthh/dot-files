@@ -1,5 +1,6 @@
 let
   uSwitchPkgs = import ../code/uswitch/nixpkgs/all-packages.nix {};
+  unstablePkgs = import ../code/nixpkgs/default.nix {};
 in {
   allowUnfree = true;
   allowBroken = true;
@@ -14,6 +15,8 @@ in {
         keepassx2
         filezilla
 
+        scudcloud
+
         gnumake380
         tree
         scrot
@@ -22,9 +25,14 @@ in {
         bazaar
         gnome3.gnome-screenshot
         pavucontrol
+        unstablePkgs.awscli
         imv
         uSwitchPkgs.vaulted
         uSwitchPkgs.stscreds
+
+        jdk8
+        leiningen
+        skype
       ];
     };
   };

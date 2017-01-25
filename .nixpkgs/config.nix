@@ -30,9 +30,10 @@ in {
         uSwitchPkgs.vaulted
         uSwitchPkgs.stscreds
 
-        jdk8
-        leiningen
-        skype
+        direnv
+        # jdk8
+        # leiningen
+        # skype
       ];
     };
   };

@@ -7,7 +7,7 @@
   (setq-default
    ;; List of additional paths where to look for configuration layers.
    ;; Paths must have a trailing slash (i.e. `~/.mycontribs/')
-   dotspacemacs-configuration-layer-path '()
+   dotspacemacs-configuration-layer-path '("~/.emacs.d/private/")
    ;; List of configuration layers to load. If it is the symbol `all' instead
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
@@ -52,6 +52,7 @@
    ;; packages then consider to create a layer, you can also put the
    ;; configuration in `dotspacemacs/config'.
    dotspacemacs-additional-packages '(
+                                      direnv
                                       multiple-cursors
                                       haml-mode
                                       flymake-puppet
@@ -78,6 +79,7 @@ before layers configuration."
   ;; This setq-default sexp is an exhaustive list of all the supported
   ;; spacemacs settings.
   (setq-default
+
    ;; Either `vim' or `emacs'. Evil is always enabled but if the variable
    ;; is `emacs' then the `holy-mode' is enabled at startup.
    dotspacemacs-editing-style 'emacs
@@ -189,6 +191,8 @@ before layers configuration."
   (setq-default js2-basic-offset 2)
   (setq-default js-indent-level 2)
   (add-hook 'clojure-mode-hook 'paredit-mode)
+;  (add-hook 'find-file-hook 'direnv-load-environment)
+;  (add-hook 'buffer-list-update-hook 'direnv-load-environment)
   )
 
 (defun dotspacemacs/config ()
@@ -199,6 +203,7 @@ layers configuration."
   (setq cider-show-error-buffer 'except-in-repl)
   (setq cider-auto-select-error-buffer nil)
   (setq cider-prompt-save-file-on-load 'always-save)
+  (setq cursor-type box)
   (add-hook 'alchemist-mode-hook 'company-mode)
   (exec-path-from-shell-initialize)
   (setq-default js2-basic-offset 2)

@@ -99,7 +99,7 @@ alias golangenv='ns ~/profiles/golang/default.nix'
 alias leinenv='ns ~/profiles/lein/default.nix'
 
 # function lein {
-#     nix-shell profiles/lein/default.nix --run "lein $@"
+# nix-shell profiles/lein/default.nix --run "lein $@"
 # }
 
 alias emacst='emacsclient -t -s /tmp/emacs1000/server'
@@ -114,6 +114,8 @@ alias gpg=gpg2
 export PATH="$PATH:$HOME/bin"
 
 source ~/.uswitch-secrets
+
+eval "$(direnv hook zsh)"
 
 function rmline {
     cat $1 | grep  -v $2 > $1.bak

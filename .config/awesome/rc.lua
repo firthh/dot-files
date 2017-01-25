@@ -39,9 +39,8 @@ end
 -- }}}
 
 -- {{{ Variable definitions
--- Themes define colours, icons, font and wallpapers.
-beautiful.init("/nix/store/0r0qv1hz9dv3gc4785b03ymf0cwl1v4h-awesome-3.5.8/share/awesome/themes/default/theme.lua")
-
+-- Themes define colours, icons, font and wallpapers
+beautiful.init("~/.config/awesome/theme.lua")
 -- This is used later as the default terminal and editor to run.
 terminal = "roxterm"
 editor = os.getenv("EDITOR") or "emacs"
